@@ -1,0 +1,23 @@
+{
+  "name": "ungarsynova_a_chatapp",
+  "version": "1.0.0",
+  "description": "Social Media chat app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aungarsynova/Ungarsynova_A_ChatApp.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Ungarsynova Aisana",
+  "license": "ISC",
+  "homepage": "https://github.com/aungarsynova/Ungarsynova_A_ChatApp#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
