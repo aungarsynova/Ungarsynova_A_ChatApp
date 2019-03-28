@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ChatTime App</title>
+	<meta charset="UTF-8">
+	<title>Socket IO Chat with Node!</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
-   <h1>Yeeehaaaww</h1> 
-   <p>HOWDY PARTNER!!!</p>
+	<main id="app">		
+		<section class="form-container">
+			<label for="nickname">Your Nickname (optional)</label>
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			
+			<form>
+				<label for="message">Something to say?</label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<input type="submit" @click.prevent="dispatchMessage">
+			</form>
+		</section>
+		
+		<section class="messages">
+			<ul id="messages" v-for="message in messages">
+                <!--render one of message components here-->
+                <newmessage :msg="message"></newmessage>
+				
+			</ul>
+		</section>		
+	</main>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="module" src="js/main_vm.js"></script>
 </body>
 </html>
