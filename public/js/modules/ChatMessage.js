@@ -11,6 +11,8 @@ export default {
     data: function() {
         return {
             matchedID: this.$parent.socketID == this.msg.id
-        }
-    }
+            }
+        },
+   
+    
 }

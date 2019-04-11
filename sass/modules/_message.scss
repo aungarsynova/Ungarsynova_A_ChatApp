@@ -3,16 +3,24 @@
 
     width: 45%;
     padding: 8px 12px;
-    background-color: white; 
+    background-color: rgb(164, 167, 166); 
     border-radius: 8px;
     margin-bottom: 1rem;
-
+    color: white;
     float:left;
     clear: both;
+    
+  animation-iteration-count: 1;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+    
 }
 
 .my-message {
     float: right !important;
-    background-color: #86bf9d;
+    background-color: #71a8a4;
     color: white;
+    -webkit-animation:  0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation:  0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+

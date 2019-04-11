@@ -5,6 +5,9 @@
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script> 
+	<script src="node_modules/chat-engine-emoji/dist/chat-engine-emoji.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
 </head>
 <body>
 	<main id="app">		
@@ -14,9 +17,11 @@
 			
 			<form>
 				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" @keydown="dispatchNotification"></textarea>
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
+
+			<p>{{notification.message}}</p>
 		</section>
 		
 		<section class="messages">

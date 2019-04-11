@@ -1,3 +1,6 @@
+$primary: #79C7C5;
+$secondary: #A1E2D9;
+
 /* reset */
 * {
 	margin: 0; padding: 0; box-sizing: border-box;
@@ -23,8 +26,9 @@ main {
 
 .messages { 
 	flex: 2;
-	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	background-color: rgb(219, 235, 236);
+	border: 6px solid white; 
+	border-radius: 5px;
 }
 
 input, textarea { 
@@ -50,7 +54,7 @@ form {
 	input[type=submit] { 
 		width: auto; 
 		padding: 10px; 
-		background-color: rgb(75, 200, 17);
+		background-color: rgb(71, 133, 124);
 		margin-top: 1rem; 
 		border-radius: 8px;
 		color: white;
@@ -62,11 +66,16 @@ form {
 
 #messages {
 	list-style-type: none; margin: 0; padding: 0;
+	
 
 	li { padding: 5px 10px;	}
 	li:nth-child(odd) { background: #eee; }
+	
 }
+
+
 
 // imports
 
 @import 'modules/_message';
+@import 'modules/_indicator';

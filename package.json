@@ -17,6 +17,8 @@
   "license": "ISC",
   "homepage": "https://github.com/aungarsynova/Ungarsynova_A_ChatApp#readme",
   "dependencies": {
+    "chat-engine-emoji": "0.0.8",
+    "chat-engine-typing-indicator": "0.0.10",
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
   }
