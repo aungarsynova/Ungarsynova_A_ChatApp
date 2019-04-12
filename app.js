@@ -26,8 +26,7 @@ io.on('connection', function(socket) {
     console.log('a user has connected');
     socket.emit('connected', {sID: `${socket.id}`, message: 'new connection'});
 
-    //
-    io.emit('enter', `${socket.id} has joined the chat`)
+    
 
     //listen to a typing event
     socket.on('notification', function({ user, ntype}) {
